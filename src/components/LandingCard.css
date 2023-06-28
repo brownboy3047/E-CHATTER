@@ -1,0 +1,24 @@
+.landing_card {
+  border: 0.5px solid gray;
+  padding: 20px;
+  border-radius: 8px;
+
+  width: 300px;
+  height: 300px;
+}
+
+.icon {
+  font-size: 30px;
+}
+
+.landing_card h2 {
+  margin: 10px 0;
+}
+
+@media all and (max-width: 800px) {
+  .landing_card {
+    /* padding: 10px; */
+    width: 200px;
+    height: 300px;
+  }
+}

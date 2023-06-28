@@ -1,0 +1,54 @@
+.sidebar {
+  flex: 0.2;
+  padding: 10px 0 10px 40px;
+  border: 1px solid #d0d0d0;
+
+  --color: #543ee0;
+}
+
+.sidebar h1 {
+  color: var(--color);
+}
+
+/* OVERVIEW */
+.sidebar .overview {
+  margin: 20px 0;
+}
+
+.sidebar .overview h3,
+.sidebar .trending h3,
+.sidebar .personal h3 {
+  color: #111;
+}
+
+.sidebar .overview ul,
+.sidebar .trending ul,
+.sidebar .personal ul {
+  padding: 20px 20px;
+}
+
+.sidebar .overview ul li,
+.sidebar .trending ul li,
+.sidebar .personal ul li {
+  color: #626262;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* TRENDING TAG */
+.sidebar .trending .trending_head {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.sidebar .sidebar_btn {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-family: sans-serif;
+  color: #ff1400;
+  margin-left: 20px;
+  background-color: transparent;
+  cursor: pointer;
+}

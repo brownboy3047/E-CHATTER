@@ -1,0 +1,103 @@
+.register h1 {
+  text-align: center;
+  font-weight: 500;
+}
+
+.register_form {
+  margin-top: 20px;
+}
+
+.register_form .register_form_name {
+  display: flex;
+}
+
+.register_form_name .first label,
+.register_form_name .last label {
+  color: #3b3b3b;
+  cursor: pointer;
+}
+
+.register_form_name .first input,
+.register_form_name .last input,
+.register_form_input input {
+  margin: 12px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: 0.5px solid gray;
+  outline: none;
+  color: #3b3b3b;
+}
+
+.register_form_select {
+  display: flex;
+  flex-direction: column;
+}
+
+.register_form_select label,
+.register_form_input label {
+  color: #3b3b3b;
+}
+
+.register_form_select select {
+  padding: 10px;
+  border: 0.5px solid gray;
+  margin: 12px 0;
+  border-radius: 8px;
+  outline: none;
+}
+
+.register_form_input {
+  display: flex;
+  flex-direction: column;
+}
+
+.register_form_btn button {
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.register_form_btn .btn_one {
+  color: #fff;
+  background-color: var(--primaryBg);
+}
+
+.register_form_btn .btn_two,
+.register_form_btn .btn_three {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #111;
+  margin: 10px 0;
+  border: 0.5px solid gray;
+
+  background-color: #fff;
+}
+
+.register_form_btn .btn_three .linkedin {
+  color: #0077b7;
+}
+
+@media all and (max-width: 800px) {
+  .register_form {
+    width: 100%;
+  }
+
+  .register_form .register_form_name {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .register_form_name .first {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .register_form_name .last {
+    display: flex;
+    flex-direction: column;
+  }
+}
