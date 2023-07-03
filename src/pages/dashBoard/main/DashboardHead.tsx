@@ -5,9 +5,10 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 //avatar
 import avatar from "../../../assets/avatar.png";
 
-import "./MainContent.css";
+//style
+import "./DashboardHead.css";
 
-const MainContent = () => {
+const DashboardHead = () => {
   return (
     <div className="main_content">
       <header className="head">
@@ -24,12 +25,8 @@ const MainContent = () => {
           <img src={avatar} alt="avatar" />
         </div>
       </header>
-
-      <main className="content">
-        <p>content</p>
-      </main>
     </div>
   );
 };
 
-export default MainContent;
+export default DashboardHead;

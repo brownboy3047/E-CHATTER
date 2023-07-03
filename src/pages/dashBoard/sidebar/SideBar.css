@@ -35,6 +35,10 @@
   cursor: pointer;
 }
 
+/* .sidebar .overview ul li nav a.active {
+  color: green;
+} */
+
 /* TRENDING TAG */
 .sidebar .trending .trending_head {
   display: flex;

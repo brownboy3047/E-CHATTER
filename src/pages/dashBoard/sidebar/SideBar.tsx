@@ -1,3 +1,6 @@
+import { NavLink } from "react-router-dom";
+
+//hooks
 import { useLogout } from "../../../hooks/useLogout";
 
 import Navigation from "../navigation/Navigation";
@@ -23,23 +26,33 @@ const SideBar = () => {
         <h3>Overview</h3>
         <ul>
           <li>
-            <Navigation icon={<CgFeed />} title="Feed" />
+            <NavLink to="/feed">
+              <Navigation icon={<CgFeed />} title="Feed" />
+            </NavLink>
           </li>
 
           <li>
-            <Navigation icon={<BsBookmarks />} title="Bookmarks" />
+            <NavLink to="/bookmark">
+              <Navigation icon={<BsBookmarks />} title="Bookmarks" />
+            </NavLink>
           </li>
 
           <li>
-            <Navigation icon={<AiOutlineTeam />} title="Teams blogs" />
+            <NavLink to="/team">
+              <Navigation icon={<AiOutlineTeam />} title="Teams blogs" />
+            </NavLink>
           </li>
 
           <li>
-            <Navigation icon={<MdOutlineDrafts />} title="Drafts" />
+            <NavLink to="/draft">
+              <Navigation icon={<MdOutlineDrafts />} title="Drafts" />
+            </NavLink>
           </li>
 
           <li>
-            <Navigation icon={<MdOutlineAnalytics />} title="Analytics" />
+            <NavLink to="/analytics">
+              <Navigation icon={<MdOutlineAnalytics />} title="Analytics" />
+            </NavLink>
           </li>
         </ul>
       </div>
@@ -74,7 +87,11 @@ const SideBar = () => {
           </li>
         </ul>
       </div>
-      <button className="sidebar_btn" onClick={logout}>
+      <button
+        className="sidebar_btn
+      "
+        onClick={logout}
+      >
         Logout
       </button>
     </aside>
