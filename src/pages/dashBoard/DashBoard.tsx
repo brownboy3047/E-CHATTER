@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import SideBar from "./sidebar/SideBar";
 import DashboardHead from "./main/DashboardHead";
 
@@ -6,11 +8,15 @@ import "./DashBoard.css";
 import { Outlet } from "react-router-dom";
 
 const DashBoard = () => {
+  const [openSidebar, setOpenSidebar] = useState(false);
   return (
     <div className="dashboard">
-      <SideBar />
+      <SideBar openSideBar={openSidebar} setOpenSideBar={setOpenSidebar} />
       <div className="dashboard_right">
-        <DashboardHead />
+        <DashboardHead
+          openSideBar={openSidebar}
+          setOpenSideBar={setOpenSidebar}
+        />
 
         <div className="dashboard_content">
           <Outlet />

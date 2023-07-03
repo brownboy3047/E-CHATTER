@@ -10,9 +10,9 @@ type IconProps = {
 const Navigation: React.FC<IconProps> = ({ icon, title }) => {
   return (
     <nav className="navigation">
-      <p>{icon}</p>
+      <p title={title}>{icon}</p>
 
-      <p>{title}</p>
+      <p className="navigation_title">{title}</p>
     </nav>
   );
 };

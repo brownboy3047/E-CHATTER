@@ -38,7 +38,7 @@ function App() {
               path="/"
               element={user ? <DashBoard /> : <Navigate to={"/register"} />}
             >
-              <Route path="/feed" element={<Feed />} />
+              <Route path="/" element={<Feed />} />
               <Route path="/bookmark" element={<BookMark />} />
               <Route path="/team" element={<TeamsBlog />} />
               <Route path="/draft" element={<Drafts />} />

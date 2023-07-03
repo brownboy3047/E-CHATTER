@@ -1,3 +1,4 @@
+import React, { Dispatch, SetStateAction } from "react";
 import { NavLink } from "react-router-dom";
 
 //hooks
@@ -12,21 +13,32 @@ import { AiOutlineTeam } from "react-icons/ai";
 import { MdOutlineDrafts, MdOutlineAnalytics } from "react-icons/md";
 import { BiTrendingUp } from "react-icons/bi";
 import { VscAccount } from "react-icons/vsc";
-import { IoIosNotificationsOutline } from "react-icons/io";
+import { IoIosNotificationsOutline, IoMdClose } from "react-icons/io";
 
 //style
 import "./SideBar.css";
 
-const SideBar = () => {
+type OpenSideProps = {
+  setOpenSideBar: Dispatch<SetStateAction<boolean>>;
+  openSideBar: boolean;
+};
+
+const SideBar: React.FC<OpenSideProps> = ({ openSideBar, setOpenSideBar }) => {
   const { logout } = useLogout();
   return (
-    <aside className="sidebar">
+    <aside className="sidebar" id={openSideBar ? "sidebar_open" : ""}>
+      <div
+        className="sidebar_close"
+        onClick={() => setOpenSideBar(!openSideBar)}
+      >
+        <IoMdClose />
+      </div>
       <h1>CHATTER</h1>
       <div className="overview">
         <h3>Overview</h3>
         <ul>
           <li>
-            <NavLink to="/feed">
+            <NavLink to="/">
               <Navigation icon={<CgFeed />} title="Feed" />
             </NavLink>
           </li>

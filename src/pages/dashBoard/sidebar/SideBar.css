@@ -4,10 +4,16 @@
   border: 1px solid #d0d0d0;
 
   --color: #543ee0;
+  background-color: #fff;
+}
+
+.sidebar .sidebar_close {
+  display: none;
 }
 
 .sidebar h1 {
   color: var(--color);
+  margin-top: 20px;
 }
 
 /* OVERVIEW */
@@ -55,4 +61,27 @@
   margin-left: 20px;
   background-color: transparent;
   cursor: pointer;
+}
+
+@media all and (max-width: 800px) {
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar .sidebar_close {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #543ee0;
+    font-size: 15px;
+  }
+
+  #sidebar_open {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
 }

@@ -1,10 +1,14 @@
 .main_content .head {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 
   border: 1px solid #d0d0d0;
   padding: 5px;
+}
+
+.main_content .head .head_menu {
+  display: none;
 }
 
 .main_content .head .head_search {
@@ -41,4 +45,24 @@
 
 .main_content .head .head_profile img {
   border-radius: 50%;
+}
+
+@media all and (max-width: 800px) {
+  .main_content .head .head_menu {
+    display: flex;
+    font-size: 30px;
+    color: #543ee0;
+  }
+
+  .main_content .head .head_search {
+    margin-left: 0;
+    height: 40px;
+    padding: 5px 10px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .main_content .head .head_search {
+    width: 300px;
+  }
 }
