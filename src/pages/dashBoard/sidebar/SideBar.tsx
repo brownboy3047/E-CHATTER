@@ -1,5 +1,4 @@
 import React, { Dispatch, SetStateAction } from "react";
-import { NavLink } from "react-router-dom";
 
 //hooks
 import { useLogout } from "../../../hooks/useLogout";
@@ -38,33 +37,39 @@ const SideBar: React.FC<OpenSideProps> = ({ openSideBar, setOpenSideBar }) => {
         <h3>Overview</h3>
         <ul>
           <li>
-            <NavLink to="/">
-              <Navigation icon={<CgFeed />} title="Feed" />
-            </NavLink>
+            <Navigation icon={<CgFeed />} title="Feed" path="/" />
           </li>
 
           <li>
-            <NavLink to="/bookmark">
-              <Navigation icon={<BsBookmarks />} title="Bookmarks" />
-            </NavLink>
+            <Navigation
+              icon={<BsBookmarks />}
+              title="Bookmarks"
+              path="/bookmark"
+            />
           </li>
 
           <li>
-            <NavLink to="/team">
-              <Navigation icon={<AiOutlineTeam />} title="Teams blogs" />
-            </NavLink>
+            <Navigation
+              icon={<AiOutlineTeam />}
+              title="Teams blogs"
+              path="/team"
+            />
           </li>
 
           <li>
-            <NavLink to="/draft">
-              <Navigation icon={<MdOutlineDrafts />} title="Drafts" />
-            </NavLink>
+            <Navigation
+              icon={<MdOutlineDrafts />}
+              title="Drafts"
+              path="/draft"
+            />
           </li>
 
           <li>
-            <NavLink to="/analytics">
-              <Navigation icon={<MdOutlineAnalytics />} title="Analytics" />
-            </NavLink>
+            <Navigation
+              icon={<MdOutlineAnalytics />}
+              title="Analytics"
+              path="/analytics"
+            />
           </li>
         </ul>
       </div>
@@ -89,12 +94,13 @@ const SideBar: React.FC<OpenSideProps> = ({ openSideBar, setOpenSideBar }) => {
 
         <ul>
           <li>
-            <Navigation icon={<VscAccount />} title="Account" />
+            <Navigation icon={<VscAccount />} title="Account" path="" />
           </li>
           <li>
             <Navigation
               icon={<IoIosNotificationsOutline />}
               title="Notification"
+              path=""
             />
           </li>
         </ul>

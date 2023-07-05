@@ -22,6 +22,7 @@ import "./App.css";
 
 function App() {
   const { user, authIsReady } = useAuthContext();
+
   return (
     <div className="app">
       <BrowserRouter>

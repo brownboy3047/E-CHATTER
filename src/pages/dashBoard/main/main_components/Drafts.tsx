@@ -2,9 +2,9 @@ import "./Drafts.css";
 
 const Drafts = () => {
   return (
-    <div>
+    <main>
       <h1>Drafts</h1>
-    </div>
+    </main>
   );
 };
 

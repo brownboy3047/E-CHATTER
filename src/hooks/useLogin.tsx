@@ -15,6 +15,7 @@ export const useLogin = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((res) => {
         dispatch({ type: "LOGIN", payload: res.user });
+        // console.log(res.user);
       })
       .catch((err) => {
         setError(err.message);

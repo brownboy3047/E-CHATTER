@@ -3,9 +3,9 @@ import "./TeamsBlog.css";
 
 const TeamsBlog = () => {
   return (
-    <div>
+    <main>
       <h1>Team Blog</h1>
-    </div>
+    </main>
   );
 };
 

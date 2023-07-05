@@ -1,6 +1,11 @@
-.navigation {
+.navigation a {
   display: flex;
   gap: 10px;
   /* justify-content: space-between; */
   align-items: center;
+  color: #111;
+}
+
+.navigation a.active {
+  color: #543ee0;
 }
