@@ -20,12 +20,12 @@ const PublishPost = () => {
   const { documents: publishPost } = useCollection("post");
   const { user } = useAuthContext();
   const [showContent, setShowContent] = useState(true);
-  const [showFeatured, setShowFeatured] = useState(false);
+  //   const [showFeatured, setShowFeatured] = useState(false);
 
-  const handleFeatured = () => {
-    setShowFeatured(!showFeatured);
-    setShowContent(false);
-  };
+  //   const handleFeatured = () => {
+  //     setShowFeatured(!showFeatured);
+  //     setShowContent(false);
+  //   };
 
   const deletePublishPost = async (id: string) => {
     const publishPostRef = doc(db, "post", id);
@@ -38,7 +38,7 @@ const PublishPost = () => {
       <div className="publish_post_section_one">
         <h2 onClick={() => setShowContent(!showContent)}>For you</h2>
 
-        <h2 onClick={handleFeatured}>Featured</h2>
+        <h2>Featured</h2>
 
         <h2>Recent</h2>
       </div>
@@ -60,6 +60,13 @@ const PublishPost = () => {
                     </div>
 
                     <h3>{post.name}</h3>
+                    {post.image && (
+                      <img
+                        src={post.image}
+                        alt="post image"
+                        className="the_post_image"
+                      />
+                    )}
                     <p>{post.postContent}</p>
                   </div>
 

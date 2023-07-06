@@ -2,37 +2,36 @@ import { useState } from "react";
 
 //firebase
 import { db, auth } from "../../../../firebase/config";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 //React icon
-import { HiOutlinePhotograph } from "react-icons/hi";
+
 import { BsEmojiSmile } from "react-icons/bs";
 import { LuPencil } from "react-icons/lu";
 
 //component
 import PublishPost from "../../../../components/PublishPost";
 
-import "./Feed.css";
+import UploadFile from "./UploadFile";
 
-// type PostContent = {
-//   setPostContent: Dispatch<SetStateAction<string>>;
-//   postContent: string;
-// };
-// : React.FC<PostContent>
-// , Dispatch, SetStateAction
+import "./Feed.css";
 
 const Feed = () => {
   const [postContent, setPostContent] = useState("");
+  const [image, setImage] = useState<string | null>(null);
 
   const createPost = async () => {
     const postRef = collection(db, "post");
 
     await addDoc(postRef, {
       postContent,
+      image,
       name: auth.currentUser?.email,
       uid: auth.currentUser?.uid,
+      timeStamp: serverTimestamp(),
     });
     setPostContent("");
+    setImage(null);
   };
 
   return (
@@ -52,7 +51,8 @@ const Feed = () => {
 
         <div className="feed_post_create">
           <div className="feed_post_icon">
-            <HiOutlinePhotograph className="feed_icon_one" title="media" />
+            <UploadFile setImage={setImage} />
+
             <BsEmojiSmile className="feed_icon_two" title="emoji" />
           </div>
 
