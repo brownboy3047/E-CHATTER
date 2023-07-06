@@ -94,13 +94,13 @@ const SideBar: React.FC<OpenSideProps> = ({ openSideBar, setOpenSideBar }) => {
 
         <ul>
           <li>
-            <Navigation icon={<VscAccount />} title="Account" path="" />
+            <Navigation icon={<VscAccount />} title="Account" path="#" />
           </li>
           <li>
             <Navigation
               icon={<IoIosNotificationsOutline />}
               title="Notification"
-              path=""
+              path="#"
             />
           </li>
         </ul>

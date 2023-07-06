@@ -43,7 +43,7 @@ const PublishPost = () => {
         <h2>Recent</h2>
       </div>
 
-      <div className="publish_post_section_two">
+      <main className="publish_post_section_two">
         {showContent && (
           <ul>
             {publishPost &&
@@ -70,7 +70,7 @@ const PublishPost = () => {
                     <div className="like" title="like">
                       <FcLike />
                     </div>
-                    <div className="analytics" title="analytics">
+                    <div className="analytics" title="statistics">
                       <SiSimpleanalytics />
                     </div>
                   </div>
@@ -80,7 +80,7 @@ const PublishPost = () => {
               ))}
           </ul>
         )}
-      </div>
+      </main>
     </div>
   );
 };

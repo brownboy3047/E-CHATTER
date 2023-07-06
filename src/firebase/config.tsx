@@ -3,7 +3,7 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDblHBhOpz4fmuvI1K1gZtDJg9mD28SaF0",
+  apiKey: import.meta.env.VITE_FIREBASE_APIKEY,
   authDomain: "chatters-f01ef.firebaseapp.com",
   projectId: "chatters-f01ef",
   storageBucket: "chatters-f01ef.appspot.com",
