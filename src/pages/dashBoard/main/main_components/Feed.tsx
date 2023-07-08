@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 //firebase
 import { db, auth } from "../../../../firebase/config";
@@ -51,7 +51,7 @@ const Feed = () => {
 
         <div className="feed_post_create">
           <div className="feed_post_icon">
-            <UploadFile setImage={setImage} />
+            <UploadFile setImage={setImage} image={image} />
 
             <BsEmojiSmile className="feed_icon_two" title="emoji" />
           </div>

@@ -12,7 +12,7 @@ import {
 import { HiOutlinePhotograph } from "react-icons/hi";
 
 interface ChildProps {
-  //   image: string | null;
+  image: string | null;
   setImage: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
@@ -59,7 +59,6 @@ const UploadFile: React.FC<ChildProps> = ({ setImage }) => {
     };
 
     file && uploadFile();
-    return () => uploadFile();
   }, [file, setImage]);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -67,10 +66,8 @@ const UploadFile: React.FC<ChildProps> = ({ setImage }) => {
     setFile(selectedFile || null);
   };
 
-  //   console.log(file?.name);
-
   return (
-    <span>
+    <span className="upload_file">
       <label className="media">
         <HiOutlinePhotograph className="feed_icon_one" title="upload picture" />
         <input

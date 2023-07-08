@@ -20,12 +20,6 @@ const PublishPost = () => {
   const { documents: publishPost } = useCollection("post");
   const { user } = useAuthContext();
   const [showContent, setShowContent] = useState(true);
-  //   const [showFeatured, setShowFeatured] = useState(false);
-
-  //   const handleFeatured = () => {
-  //     setShowFeatured(!showFeatured);
-  //     setShowContent(false);
-  //   };
 
   const deletePublishPost = async (id: string) => {
     const publishPostRef = doc(db, "post", id);
